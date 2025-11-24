@@ -8,7 +8,7 @@ def run_tests():
         return "❌ Tests fallidos"
 
 def update_readme(status: str):
-    with open("README.md", "r", encoding="utf-8") as f:
+    with open("../README.md", "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     new_lines = []
@@ -18,7 +18,7 @@ def update_readme(status: str):
             new_lines.append(status + "\n")
             break
 
-    with open("README.md", "w", encoding="utf-8") as f:
+    with open("../README.md", "w", encoding="utf-8") as f:
         f.writelines(new_lines)
 
 if __name__ == "__main__":
